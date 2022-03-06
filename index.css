@@ -466,9 +466,9 @@ h2 {
   margin-top: 130px;
 }
 
-/* .BestSelling .Products-Beds {
+.BestSelling .Products-Beds {
   display: none;
-} */
+}
 
 .BestSelling .Product {
   display: flex;

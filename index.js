@@ -80,49 +80,32 @@ tips();
 
 
 
-// function tabProducts() {
-//   function handleTab(event) {
-//     if (event.target.tagName != "BUTTON") return;
+function tabProducts() {
+  function handleTab(event) {
+    if (event.target.tagName != "BUTTON") return;
 
-//     let active = tabs.querySelector('.Tab_active');
+    let active = tabs.querySelector('.Tab_active');
 
-//     active.classList.remove('Tab_active');
+    active.classList.remove('Tab_active');
 
-//     event.target.classList.toggle('Tab_active');
+    event.target.classList.toggle('Tab_active');
 
-//     if (event.target.classList.contains('Tab_beds')) {
-//       beds.style.display = 'flex';
-//       chairs.style.display = 'none';
-//     }
+    if (event.target.classList.contains('Tab_beds')) {
+      beds.style.display = 'flex';
+      chairs.style.display = 'none';
+    }
 
-//     if (event.target.classList.contains('Tab_chair')) {
-//       beds.style.display = 'none';
-//       chairs.style.display = 'flex';
-//     }
-//   }
-
-//   tabs.addEventListener('click', handleTab);
-// }
-
-// tabProducts();
-
-
-function openProduct(event, prodName) {
-  const products = document.querySelectorAll('.Products');
-  for (product of products) {
-    product.style.display = "none";
+    if (event.target.classList.contains('Tab_chair')) {
+      beds.style.display = 'none';
+      chairs.style.display = 'flex';
+    }
   }
 
-  const tabs = document.querySelectorAll('.Tab');
-  for (tab of tabs) {
-    tab.classList.remove('Tab_active');
-  }
-
-  document.getElementById('prodName').style.display = "flex";
-  event.currentTarget.classList.add('Tab_active');
+  tabs.addEventListener('click', handleTab);
 }
 
-document.getElementById("defaultOpen").click();
+tabProducts();
+
 
 
 
