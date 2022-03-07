@@ -69,7 +69,6 @@ a, h1, h2, h3, h4, h5, h6, p {
   --color-grey_dark: #eee;
   --color-grey_light: #f7f7f7;
 
-
 }
 
 
@@ -453,13 +452,13 @@ h2 {
   cursor: pointer;
 }
 
-.BestSelling .Tab_active{
+.BestSelling .Tab.active{
   background-color: #fff;
 }
 
 .BestSelling .Products {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;

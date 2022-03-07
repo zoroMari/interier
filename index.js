@@ -80,32 +80,22 @@ tips();
 
 
 
-function tabProducts() {
-  function handleTab(event) {
-    if (event.target.tagName != "BUTTON") return;
-
-    let active = tabs.querySelector('.Tab_active');
-
-    active.classList.remove('Tab_active');
-
-    event.target.classList.toggle('Tab_active');
-
-    if (event.target.classList.contains('Tab_beds')) {
-      beds.style.display = 'flex';
-      chairs.style.display = 'none';
-    }
-
-    if (event.target.classList.contains('Tab_chair')) {
-      beds.style.display = 'none';
-      chairs.style.display = 'flex';
-    }
+function openProduct(event, prodName) {
+  const products = document.querySelectorAll('.Products');
+  for (product of products) {
+    product.style.display = "none";
   }
 
-  tabs.addEventListener('click', handleTab);
+  const tabs = document.querySelectorAll('.Tab');
+  for (tab of tabs) {
+    tab.classList.remove('active');
+  }
+
+  document.getElementById(prodName).style.display = "flex";
+  event.currentTarget.classList.add('active');
 }
 
-tabProducts();
-
+document.getElementById("defaultOpen").click();
 
 
 
