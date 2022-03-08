@@ -365,13 +365,13 @@ h2 {
   color: var(--color-black);
 }
 
-.WhyChoosingUs .Reason-MoreInfo {
+.MoreInfo {
   display: flex;
   align-items: center;
   width: auto;
 }
 
-.WhyChoosingUs .Reason-MoreInfo p {
+.MoreInfo p {
   margin-right: 5px;
   color: var(--color-main);
   font: var(--font-body_small);
@@ -559,5 +559,75 @@ h2 {
 
 .BestSelling .Product:not(:last-of-type) {
   margin-right: 42px;
+}
+
+.BestSelling-ViewAll {
+  display: flex;
+  align-items: center;
+  font: var(--font-body_medium);
+  color: var(--color-main);
+  margin: 60px auto 50px auto;
+}
+
+
+
+/* about us */
+.AboutUs {
+  padding: 306px 0px 200px 0px;
+}
+
+.Feature {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 80px 0px 0px;
+}
+
+.Feature_2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0px 0px 80px;
+}
+
+.Feature-Info {
+  display: flex;
+  flex-direction: column;
+}
+
+.Feature-Info_left {
+  margin-left: 80px;
+}
+
+.Feature-Info_right {
+  margin-right: 80px;
+}
+
+.AboutUs .Feature-Label {
+  font: var(--font-lable);
+  color: var(--color-main);
+  text-transform: uppercase;
+}
+
+.AboutUs h2 {
+  margin-top: 20px;
+  color: var(--color-black);
+}
+
+.AboutUs .Feature-Description {
+  font: var(--font-body_medium);
+  color: var(--color-black);
+  margin: 24px 0px;
+}
+
+@media screen and (max-width:1024px) {
+  .AboutUs .Feature-Img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width:1600px) {
+  .AboutUs .Feature {
+    align-items: center;
+  }
 }
 
