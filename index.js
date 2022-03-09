@@ -80,33 +80,6 @@ tips();
 
 
 
-// function tabProducts() {
-//   function handleTab(event) {
-//     if (event.target.tagName != "BUTTON") return;
-
-//     let active = tabs.querySelector('.Tab_active');
-
-//     active.classList.remove('Tab_active');
-
-//     event.target.classList.toggle('Tab_active');
-
-//     if (event.target.classList.contains('Tab_beds')) {
-//       beds.style.display = 'flex';
-//       chairs.style.display = 'none';
-//     }
-
-//     if (event.target.classList.contains('Tab_chair')) {
-//       beds.style.display = 'none';
-//       chairs.style.display = 'flex';
-//     }
-//   }
-
-//   tabs.addEventListener('click', handleTab);
-// }
-
-// tabProducts();
-
-
 function openProduct(event, prodName) {
   const products = document.querySelectorAll('.Products');
   for (product of products) {
@@ -115,63 +88,14 @@ function openProduct(event, prodName) {
 
   const tabs = document.querySelectorAll('.Tab');
   for (tab of tabs) {
-    tab.classList.remove('Tab_active');
+    tab.classList.remove('active');
   }
 
-  document.getElementById('prodName').style.display = "flex";
-  event.currentTarget.classList.add('Tab_active');
+  document.getElementById(prodName).style.display = "flex";
+  event.currentTarget.classList.add('active');
 }
 
 document.getElementById("defaultOpen").click();
 
 
-
-
-// const starTest = document.querySelector('.StarTest');
-// const stars = document.querySelectorAll('.StarOne');
-
-
-// const test = document.querySelector('.Test');
-
-// test.onmouseover = function(event) {
-
-//   function handleStarsOver(event) {
-//     let target = event.target.closest('svg');
-  
-//     // if(!target) return;
-  
-//     target.style.fill = '#F6B76F';
-  
-//   }
-  
-  
-//   function handleStarsOut(event) {
-//     let target = event.target.closest('svg');
-  
-//     if (
-//       event.clientY < target.getBoundingClientRect().top || 
-//       event.clientY > target.getBoundingClientRect().bottom ) {
-//         target.style.fill = '#F6B76F';
-//       }
-  
-    
-//     if (event.clientX > target.getBoundingClientRect().left) {
-//       target.style.fill = '#F6B76F';
-//     } else {
-//       target.style.fill = 'none';
-//     }
-//   }
-  
-  
-//   starTest.addEventListener('mouseover', handleStarsOver);
-//   starTest.addEventListener('mouseout', handleStarsOut);
-//   starTest.addEventListener('mousedown', handleStarsDown);
-
-
-
-//   function handleStarsDown(event) {
-//     starTest.removeEventListener('mouseover', handleStarsOver);
-//     starTest.removeEventListener('mouseout', handleStarsOut);
-//   }
-// };
 
