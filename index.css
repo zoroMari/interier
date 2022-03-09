@@ -573,7 +573,8 @@ h2 {
 
 /* about us */
 .AboutUs {
-  padding: 306px 0px 200px 0px;
+  padding: 306px 0px 240px 0px;
+  width: 100%;
 }
 
 .Feature {
@@ -601,7 +602,7 @@ h2 {
   margin-right: 80px;
 }
 
-.AboutUs .Feature-Label {
+.Label {
   font: var(--font-lable);
   color: var(--color-main);
   text-transform: uppercase;
@@ -631,3 +632,133 @@ h2 {
   }
 }
 
+
+
+/* client reviews */
+.clientReviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+  height: auto;
+}
+
+.clientReviews h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.clientReviews .Reviews {
+  margin: 10px 127px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clientReviews .Review {
+  height: 506px;
+  position: relative;
+}
+
+.clientReviews .Review:not(:last-child) {
+  margin-right: 38px;
+}
+
+.clientReviews .Review-Contant {
+  position: relative;
+  height: 476px;
+  width: 370px;
+  border-radius: 18px;
+}
+
+.Review .Bg_Shadow {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Review .Photo {
+  position: absolute;
+  left: 18px;
+  top: 218px;
+}
+
+.Review .Info-Stars {
+  display: flex;
+  align-items: center;
+}
+
+
+.Review .Info-Stars svg:not(:last-child) {
+  display: flex;
+  margin-right: 5px;
+}
+
+.Review .Info-Stars svg:last-child {
+  opacity: 30%;
+}
+
+.Review .Contant-Info {
+  position: absolute;
+  width: 254px;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Review .Info-Name {
+  font: var(--font-lable);
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+
+.Review .Info-City {
+  font: 12px/15px var(--font-family);
+  font-weight: 400;
+  color: var(--color-black);
+  opacity: 60%;
+}
+
+.Review .Info-Review {
+  font: 14px/17px var(--font-family);
+  font-weight: 400;
+  color: var(--color-black);
+  opacity: 80%;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.clientReviews .Contant_1 {
+  background: url("img/reviews/bangUpin_bg.png") no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
+.clientReviews .Contant_2 {
+  background: url("img/reviews/ibukSukjan_bg.png") no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
+.clientReviews .Contant_3 {
+  background: url("img/reviews/mpokIna_bg.png") no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
+@media screen and (max-width:1366px) {
+  .clientReviews .Reviews {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .clientReviews .Review:not(:last-child) {
+    margin-right: 0px;
+  }
+}
